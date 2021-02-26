@@ -1,6 +1,4 @@
 {
   "default": "--tags 'not @ignore' --require-module @babel/register",
-  "ci": "--tags 'not @ignore'  --require-module @babel/register --format=json:reports/report.json --world-parameters '{\"browser\": \"chrome:headless\"}'",
-  "amplify": "--tags 'not @ignore'  --require-module @babel/register --world-parameters '{\"browser\": \"chrome:headless\"}'"
-
+  "ci": "--tags 'not @ignore'  --require-module @babel/register --format=json:reports/report.json --world-parameters '{\"browser\": \"chrome:headless\"}'"
 }
