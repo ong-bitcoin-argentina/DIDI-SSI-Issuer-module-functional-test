@@ -6,15 +6,15 @@ Given('Ingreso a la pantalla de login', async () => {
   await pages.login.navigate();
 });
 
-When('Ingreso con el usuario {string}', async (text) => {
-  await pages.login.login(text);
+When('Ingreso con el email de Testing', async () => {
+  await pages.login.loginTEST();
 });
 
 When('Compruebo los criterios de aceptación', async () => {
 });
 
 Then('retorna la pagina home', async () => {
-  await pages.login.navigateHome();
+  //await pages.login.navigateHome();
 });
 
 Then('Se visualiza el contenido de la pagina correctamente', async () => {

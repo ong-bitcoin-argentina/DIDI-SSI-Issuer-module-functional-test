@@ -13,7 +13,7 @@ export class Login {
   }
 
   emailImput  () {
-    return select('#root > div > div > div.LeftContainer > div > form > input:nth-child(1)')
+    return select('input.LoginInput:nth-child(1)')
   }
 
   passwordImput () {
@@ -66,22 +66,30 @@ export class Login {
   async login (email) {
     await testController
       .click(this.emailImput())
-      .typeText(this.emailImput(), email, { paste: true })
+      .typeText(this.emailImput(), "email", { paste: true })
       .click(this.passwordImput())
       .typeText(this.passwordImput(), password, { paste: true })
       .click(this.loginButton())
   }
 
-  async loginValidate (email) {
+  async loginTEST (email) {
+    await testController
+      .click(this.emailImput())
+      .typeText(this.emailImput(), "email@test.com")
+  }
+
+  async loginValidate () {
     const loginTitle = this.loginTitle();
     const aidiLogoImg = this.aidiLogoImg();
     const firstTextTitle = this.firstTextTitle();
     const versionText = this.versionText();
 
     await testController
+      .click(this.emailImput())
+      .typeText(this.emailImput(), "test")
       .expect(aidiLogoImg).ok('El logo de AIDI se visualiza', { allowUnawaitedPromise: false })
       .expect(loginTitle).eql("Emisor de Credenciales Web")
-      .expect(firstTextTitle).eql("BIENVENIDO ALBIENVENIDO AL")
+      .expect(firstTextTitle).eql("BIENVENIDO AL")
       .expect(versionText).eql("v0.3.31")
   }
 }

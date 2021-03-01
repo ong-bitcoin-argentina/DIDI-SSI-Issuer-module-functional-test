@@ -11,7 +11,7 @@ const options = {
   metadata: {
     'App Version': packageJSON.version,
     'Test Environment': 'Development',
-    Browser: 'chrome',
+    Browser: 'firefox',
     Platform: process.platform,
     Parallel: 'Scenarios',
   },

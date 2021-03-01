@@ -15,7 +15,7 @@ function CustomWorld({ attach, parameters }) {
 
   this.getBrowser = () => {
     if (!parameters.browser) {
-      return 'chrome';
+      return 'firefox';
     }
     return parameters.browser;
   };
