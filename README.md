@@ -30,6 +30,14 @@ Contiene todos los selectores de un Screen del cual se va estar realizando las p
 > import { testController } from '../support/world' => *"Archivo que gestiona el controlador de testcafe y le agrega las funciones de screenshot y validaciones durante el proceso CI"*
 > import { select } from '../support/utils' => Importa la funcion de TestCafe Selector()
 > import { ClientFunction } from 'testcafe'; => cliente que realiza la ejecucción de Testcafe
+> import { **NombreDePagina** } from '**nombredepagina**.page' => Se importa dentro del archivo pages todas las paginas las cuales se le extrajo los selectors. 
+
+## Steps
+Contiene los textos de las features y su conversión a JS. Se llama la función de BDD y se le asigna el texto que contenga la feature y dentro de la misma se llaman a las funciones de testing que estan contenidas en las pages.
+
+> When('Ingreso con el usuario {string}', async (text) => {       # el llamado {string} es para referenciar que dentro del texto de la feature se esta trayendo un texto con comillas dobles "" con formato string.
+>  await pages.login.login(text);
+> });
 
 # ESCRITURA EN PROGRESO
 As [Gastón Genaud] writes this guide.
