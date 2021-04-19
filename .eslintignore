@@ -1,0 +1,14 @@
+# dependencies
+node_modules/
+
+#assets/
+.yarn/
+.expo-shared/
+
+#reports
+reports/
+
+#Features
+features/
+
+*.json
