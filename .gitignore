@@ -101,3 +101,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+#AGREGO PARA EVITAR LA SUBIDA DE REPORTES EN PRUEBAS LOCALES
+reports/
