@@ -9,7 +9,7 @@ export class Login {
   constructor () {
     dotenv.config();
     this.url = process.env.URL_HOST + `login`
-    this.urlHome = process.env.URL_HOST + `certificates`
+    this.urlHome = process.env.URL_HOST + `list`
   }
 
   emailImput  () {
@@ -46,14 +46,14 @@ export class Login {
 
   async navigateHome () {
     dotenv.config();
-    this.urlHome = process.env.URL_HOST + `certificates`;
+    this.urlHome = process.env.URL_HOST + `list`;
     console.log(this.urlHome);
     const getLocation = ClientFunction(() => document.location.href).with({ boundTestRun: testController });
     await testController.expect(getLocation()).contains(this.urlHome);
   }
   async navigateHomeAndExit () {
     dotenv.config();
-    this.urlHome = process.env.URL_HOST + `certificates`;
+    this.urlHome = process.env.URL_HOST + `list`;
     console.log(this.urlHome);
     const getLocation = ClientFunction(() => document.location.href).with({ boundTestRun: testController });
     await testController
@@ -63,16 +63,16 @@ export class Login {
     .expect(getLocation()).contains(this.url);
   }
 
-  async login (email) {
+  async login () {
     await testController
       .click(this.emailImput())
-      .typeText(this.emailImput(), "email", { paste: true })
+      .typeText(this.emailImput(), process.env.USER, { paste: true })
       .click(this.passwordImput())
-      .typeText(this.passwordImput(), password, { paste: true })
+      .typeText(this.passwordImput(), process.env.PASSWORD, { paste: true })
       .click(this.loginButton())
   }
 
-  async loginTEST (email) {
+  async loginTEST () {
     await testController
       .click(this.emailImput())
       .typeText(this.emailImput(), "email@test.com")
@@ -90,6 +90,6 @@ export class Login {
       .expect(aidiLogoImg).ok('El logo de AIDI se visualiza', { allowUnawaitedPromise: false })
       .expect(loginTitle).eql("Emisor de Credenciales Web")
       .expect(firstTextTitle).eql("BIENVENIDO AL")
-      .expect(versionText).eql("v0.3.31")
+      .expect(versionText).eql("vnext")
   }
 }

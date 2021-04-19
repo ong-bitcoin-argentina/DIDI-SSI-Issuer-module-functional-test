@@ -7,10 +7,11 @@ Given('Ingreso a la pantalla de login', async () => {
 });
 
 When('Ingreso con el email de Testing', async () => {
-  await pages.login.loginTEST();
+  await pages.login.login();
 });
 
 When('Compruebo los criterios de aceptación', async () => {
+  await pages.login.loginValidate();
 });
 
 Then('retorna la pagina home', async () => {
@@ -18,5 +19,4 @@ Then('retorna la pagina home', async () => {
 });
 
 Then('Se visualiza el contenido de la pagina correctamente', async () => {
-  await pages.login.loginValidate();
 });
