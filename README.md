@@ -1,7 +1,6 @@
 # Librería de automation Front-End
 ## DIDI-SSI-Issuer-module-functional-test
 
-[![N|Solid](https://scontent.fcor2-1.fna.fbcdn.net/v/t31.0-8/28164644_1184421918355315_3423750793033253975_o.png?_nc_cat=108&ccb=3&_nc_sid=09cbfe&_nc_ohc=ROtlM0IwDZMAX_o6WSt&_nc_ht=scontent.fcor2-1.fna&oh=f9bce7ca0a6b7d4ff9c7f97bd3c78653&oe=60668CF3)](https://nodesource.com/products/nsolid)
 
 
 
@@ -35,9 +34,8 @@ Contiene todos los selectores de un Screen del cual se va estar realizando las p
 ## Steps
 Contiene los textos de las features y su conversión a JS. Se llama la función de BDD y se le asigna el texto que contenga la feature y dentro de la misma se llaman a las funciones de testing que estan contenidas en las pages.
 
-> When('Ingreso con el usuario {string}', async (text) => {       # el llamado {string} es para referenciar que dentro del texto de la feature se esta trayendo un texto con comillas dobles "" con formato string.
+> When('Ingreso con el usuario {string}', async (text) => {       # el llamado {string} es para referenciar que dentro del texto de la feature se esta trayendo un texto con comillas dobles "" con formato string. Se puede utilizar para incertarlo en una función que ocupe la logica para realizar el caso de prueba.
 >  await pages.login.login(text);
 > });
 
-# ESCRITURA EN PROGRESO
 As [Gastón Genaud] writes this guide.
