@@ -90,6 +90,6 @@ export class Login {
       .expect(aidiLogoImg).ok('El logo de AIDI se visualiza', { allowUnawaitedPromise: false })
       .expect(loginTitle).eql("Emisor de Credenciales Web")
       .expect(firstTextTitle).eql("BIENVENIDO AL")
-      .expect(versionText).eql("vnext")
+      .expect(versionText).eql("v0.4.1")
   }
 }
