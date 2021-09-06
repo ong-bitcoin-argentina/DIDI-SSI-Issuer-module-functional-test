@@ -1,5 +1,5 @@
 {
-  "name": "@proyecto-didi/DIDI-SSI-Issuer-module-functional-test",
+  "name": "@proyecto-didi/didi-ssi-issuer-module-functional-test",
   "version": "1.0.1",
   "description": "Libreria de automation para la plataforma de credenciales del proyecto DIDI",
   "scripts": {
